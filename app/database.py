@@ -1,10 +1,7 @@
 from pymongo import MongoClient
 from bson import ObjectId
-from decouple import config
 
-connection_details = config("DB_HOST")
-
-client = MongoClient(connection_details)
+client = MongoClient("mongodb://mongodb:27017")
 
 database = client.recipes
 
