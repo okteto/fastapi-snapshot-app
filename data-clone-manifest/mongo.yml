@@ -74,7 +74,7 @@ spec:
         name: data
         annotations:
           dev.okteto.com/from-snapshot-name: mongo-snapshot
-          dev.okteto.com/from-snapshot-namespace: youngestdev
+          dev.okteto.com/from-snapshot-namespace: snapshot-demo-youngestdev
       spec:
         accessModes: [ "ReadWriteOnce" ]
         resources:

@@ -5,4 +5,4 @@ metadata:
 spec:
   volumeSnapshotClassName: okteto-snapshot-class
   source:
-    persistentVolumeClaimName: data
+    persistentVolumeClaimName: data-mongodb-0
