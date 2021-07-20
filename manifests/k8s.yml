@@ -13,7 +13,7 @@ spec:
         app: fastapi-snapshot-demo
     spec:
       containers:
-      - image: youngestdev/fastapi-snapshot-app:latest
+      - image: youngestdev/fastapi-snapshot-demo:latest
         name: fastapi-snapshot-demo
 
 ---
