@@ -1,0 +1,5 @@
+deploy:
+  - name: Deploy MongoDB
+    command: kubectl apply -f manifests/mongo.yaml
+  - name: Deploy the Recipes app
+    command: kubectl apply -f manifests/app.yaml

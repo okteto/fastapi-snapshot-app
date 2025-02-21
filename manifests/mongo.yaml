@@ -16,8 +16,8 @@ metadata:
   name: mongodb
 spec:
   ports:
-  - port: 27017
-    targetPort: 27017
+    - port: 27017
+      targetPort: 27017
   clusterIP: None
   selector:
     app: mongo
@@ -45,7 +45,7 @@ spec:
           ports:
             - containerPort: 27017
               protocol: TCP
-          resources: { }
+          resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
@@ -60,7 +60,7 @@ spec:
           image: busybox
           imagePullPolicy: Always
           name: init-mongodb
-          resources: { }
+          resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
@@ -73,7 +73,7 @@ spec:
           image: bitnami/mongodb:latest
           imagePullPolicy: IfNotPresent
           name: init-volume-mongodb
-          resources: { }
+          resources: {}
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           volumeMounts:
@@ -85,3 +85,4 @@ spec:
           persistentVolumeClaim:
             claimName: data
 ---
+
