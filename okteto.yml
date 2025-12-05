@@ -1,0 +1,10 @@
+build:
+  fastapi:
+    context: .
+
+deploy:
+    - name: Deploy Application
+      command: |
+        kubectl apply -f manifests/mongo.yml
+        envsubst < manifests/fastapi.yml | kubectl apply -f -
+

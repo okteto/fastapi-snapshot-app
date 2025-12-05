@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: data
 spec:
-  storageClassName: csi-okteto-standard
+  storageClassName: csi-okteto
   accessModes:
     - ReadWriteOnce
   resources:

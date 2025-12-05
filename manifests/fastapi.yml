@@ -13,7 +13,7 @@ spec:
         app: fastapi-snapshot-demo
     spec:
       containers:
-      - image: youngestdev/fastapi-snapshot-demo:latest
+      - image: ${OKTETO_BUILD_FASTAPI_IMAGE}
         name: fastapi-snapshot-demo
 
 ---
