@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-snapshot-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-snapshot-demo
+  template:
+    metadata:
+      labels:
+        app: fastapi-snapshot-demo
+    spec:
+      containers:
+      - image: ${OKTETO_BUILD_FASTAPI_IMAGE}
+        name: fastapi-snapshot-demo
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-snapshot-demo
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP
+  ports:
+  - name: "fastapi-snapshot-demo"
+    port: 8080
+  selector:
+    app: fastapi-snapshot-demo
+
+
+---
